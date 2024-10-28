@@ -1,12 +1,14 @@
 export interface UserRegRequest {
     type: string,
-    data:
-        {
-            name: string,
-            password: string,
-        },
+    data:string,
     id: string,
 }
+
+
+// {
+//     name: string,
+//     password: string,
+// },
 
 export interface UserData {
     id:string,
@@ -25,15 +27,17 @@ export interface CreateRoomRequest {
 
 export interface UpdateRoomResponse {
     type: string,
-    data: RoomData[],
+    data: string,
+    id: number,
+}
+// RoomData[]
+export interface UpdateWinnersResponse {
+    type: string,
+    data: string,
     id: number,
 }
 
-export interface UpdateWinnersResponse {
-    type: string,
-    data: {name: string, wins: number}[],
-    id: number,
-}
+// {name: string, wins: number}[],
 
 export interface RoomData {
     roomId: number | string,
@@ -44,3 +48,13 @@ export interface RoomUserInfo {
         name: string,
         index: number | string,
     }
+
+export interface RoomAddRequest {
+        type: "add_user_to_room",
+        data: string
+        id: 0,
+    }
+export interface Game {
+
+}
+    //  indexRoom: <number | string>
