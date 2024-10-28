@@ -6,7 +6,7 @@ import { resolve } from "path";
 const config: Configuration = {
   mode: "none", // Sets bundling mode to 'none' (no optimizations).
   entry: {
-    bundle: "index.ts", // Entry point of the application.
+    bundle: "./src/index.ts", // Entry point of the application.
   },
   target: "node", // Bundles code for Node.js environment.
   module: {
